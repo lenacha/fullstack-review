@@ -7,7 +7,8 @@ let repoSchema = mongoose.Schema({
   name: String,
   html_url: String,
   forks_count: Number,
-  stargazers_count: Number
+  stargazers_count: Number,
+  createdAt: Date
 });
 
 let Repo = mongoose.model('Repo', repoSchema);
@@ -19,7 +20,6 @@ let save = (data, callback) => {
   var errArr = [];
   var count = 0;
   data.forEach((repo) => {
-    console.log(repo)
     Repo.updateOne({ repo_id: repo.repo_id }, repo, { upsert: true }, (err) => {
       count++
       if (err) {

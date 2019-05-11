@@ -27,6 +27,7 @@ app.post('/repos', function (req, res) {
             selectedRepo[category[i]] = repo[category[i]]
           }
         }
+        selectedRepo['createdAt'] = new Date();
         selected.push(selectedRepo)
       })
 
