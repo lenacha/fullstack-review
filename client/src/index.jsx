@@ -17,7 +17,7 @@ class App extends React.Component {
     console.log(`${term} was searched`);
     $.ajax({
       type: "POST",
-      url: 'http://127.0.0.1:1128/repos',
+      url: '/repos',
       data: JSON.stringify({value: term}),
       success: ()=>{console.log('ok')},
       contentType: 'application/json'
@@ -26,7 +26,7 @@ class App extends React.Component {
   getData () {
     $.ajax({
       type: "GET",
-      url: 'http://127.0.0.1:1128/repos',
+      url: '/repos',
       success: (response) => { 
         console.log(response);
         this.setState({
