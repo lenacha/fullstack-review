@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+mongoose.connect('mongodb://heroku_dvpvbl67:dc2q0kgbsa81e0bf28lmfa9lb1@ds155516.mlab.com:55516/heroku_dvpvbl67');
 
 let repoSchema = mongoose.Schema({
   // TODO: your schema here!
